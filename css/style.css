@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    font-family: 'rubik', sans-serif;
+    background-color: hsla(270, 20%, 96%, 0.473);
+}
+
+.background-1 {
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    background-image: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 0 0 200px 200px;
+    top: 0;
+    left: -85px;
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .background-1 {
+        left: -80px;
+        top: -30%;
+        width: 50%;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 0;
+        margin: auto;
+    }
+}
+
+.mobile {
+    padding: 12px;
+    background-color: #fff;
+    box-shadow: 3px 10px 20px 1px #0000001a;
+    border-radius: 30px;
+}
+
+.app {
+    height: 615px;
+    width: 300px;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.app .head {
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    display: flex;
+    align-items: center;
+    padding: 35px 20px 15px 20px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+
+.app .head::before {
+    position: absolute;
+    content: "";
+    width: 165px;
+    height: 20px;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 20px 20px;
+}
+
+.app .head i {
+    color: #fff;
+    font-size: 13px;
+}
+
+.app .head .arrow-left {
+    margin-right: 10px;
+}
+
+.app .head .user {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.app .head .user img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 10px;
+}
+
+.app .head .user .user-name span {
+    display: block;
+}
+
+.app .head .user .user-name span:nth-child(1) {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+}
+
+.app .head .user .user-name span:nth-child(2) {
+    font-size: 10px;
+    margin-top: 3px;
+    color: hsl(206, 6%, 79%);
+}
+
+.app .chat {
+    padding: 15px 10px;
+}
+
+.app .chat p:nth-child(1),
+.app .chat p:nth-child(2) {
+    color: hsl(276, 55%, 52%);
+    background-color: hsla(276, 100%, 81%, 0.192);
+    width: 180px;
+    padding: 10px;
+    border-radius: 15px 15px 15px 5px;
+    font-size: 10px;
+    margin-bottom: 12px;
+}
+
+.app .chat .images {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.app .chat .images img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.app .chat p:nth-child(4),
+.app .chat p:nth-child(5) {
+    color: hsl(271, 15%, 43%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px 15px 5px 15px;
+    font-size: 10px;
+    margin-top: 15px;
+    box-shadow: -1px 4px 20px 0px #00000013;
+    margin-left: auto;
+}
+
+.app .chat p:nth-child(4) {
+    width: 180px;
+}
+
+.app .chat p:nth-child(5) {
+    width: 100px;
+    margin-top: 12px;
+}
+
+.app .chat p:nth-child(6) {
+    color: hsl(276, 55%, 52%);
+    background-color: hsla(276, 100%, 81%, 0.192);
+    width: 180px;
+    padding: 10px;
+    border-radius: 15px 15px 15px 5px;
+    font-size: 10px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+.app .chat .price {
+    width: 220px;
+    height: 40px;
+    background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 15px;
+    border-radius: 15px 15px 15px 5px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.app .chat .price .circle {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 13px;
+}
+
+.app .chat .price .time {
+    font-size: 10px;
+}
+
+.app .chat .price h4 {
+    margin-left: auto;
+}
+
+.app .message {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 20px #00000015;
+    position: relative;
+}
+
+.app .message::before {
+    position: absolute;
+    content: "\f054";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    right: 8px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: hsl(271, 36%, 24%);
+    border-radius: 50%;
+}
+
+.app .message span {
+    font-size: 11px;
+    color: hsl(206, 6%, 79%);
+    padding: 7px 0 2px 25px;
+}
+
+@media (max-width: 991px) {
+    .mobile {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+.text {
+    width: 450px;
+}
+
+.text h1 {
+    color: hsl(271, 36%, 24%);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.text p {
+    color: hsl(270, 7%, 64%);
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .text {
+        text-align: center;
+        width: 90%;
+        margin: 20px auto;
+    }
+}
