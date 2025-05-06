@@ -16,3 +16,4 @@ This project showcases a sleek and modern chat app user interface embedded withi
 To provide a front-end UI prototype for a chat application, suitable for portfolios, UI/UX practice, presentations, or integration into larger web projects.
 
 Live Demo:
+https://ziad-eid.github.io/Chat-App/
